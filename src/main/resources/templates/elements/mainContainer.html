@@ -1,0 +1,16 @@
+<th:block xmlns:th="http://www.thymeleaf.org">
+    <main class="px-3">
+        <h1>Wybierz źródło danych do dodania:</h1>
+        <div class="d-inline-flex data-sources">
+            <th:block th:replace="elements/dataSource"></th:block>
+        </div>
+        <div class="mt-5">
+            <meta name="_csrf" content="${_csrf.token}"/>
+            <meta name="_csrf_header" content="${_csrf.headerName}"/>
+            <button type="button" class="btn btn-outline-light block" id="sumDataButton" disabled>Dodaj dane</button>
+        </div>
+        <div class="d-block mt-5">
+            <th:block th:replace="elements/dataResult"></th:block>
+        </div>
+    </main>
+</th:block>
